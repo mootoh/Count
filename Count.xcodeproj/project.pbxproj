@@ -15,12 +15,16 @@
 		92D5C12C156B6CC500EDA80C /* MTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C12B156B6CC500EDA80C /* MTAppDelegate.m */; };
 		92D5C12F156B6CC500EDA80C /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D5C12D156B6CC500EDA80C /* MainStoryboard_iPhone.storyboard */; };
 		92D5C132156B6CC500EDA80C /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92D5C130156B6CC500EDA80C /* MainStoryboard_iPad.storyboard */; };
-		92D5C135156B6CC500EDA80C /* MTViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C134156B6CC500EDA80C /* MTViewController.m */; };
+		92D5C135156B6CC500EDA80C /* MTAnotherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C134156B6CC500EDA80C /* MTAnotherViewController.m */; };
 		92D5C13D156B6CC500EDA80C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D5C13C156B6CC500EDA80C /* SenTestingKit.framework */; };
 		92D5C13E156B6CC500EDA80C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D5C11B156B6CC500EDA80C /* UIKit.framework */; };
 		92D5C13F156B6CC500EDA80C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D5C11D156B6CC500EDA80C /* Foundation.framework */; };
 		92D5C147156B6CC500EDA80C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 92D5C145156B6CC500EDA80C /* InfoPlist.strings */; };
 		92D5C14A156B6CC500EDA80C /* CountTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C149156B6CC500EDA80C /* CountTests.m */; };
+		92D5C155156B6FCE00EDA80C /* MTCounterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C154156B6FCE00EDA80C /* MTCounterViewController.m */; };
+		92D5C158156B7CB100EDA80C /* MTVisualizerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92D5C157156B7CB100EDA80C /* MTVisualizerViewController.m */; };
+		92D5C15E156B808100EDA80C /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D5C15D156B808100EDA80C /* Icon.png */; };
+		92D5C160156B808700EDA80C /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92D5C15F156B808700EDA80C /* Icon@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,22 +42,28 @@
 		92D5C11B156B6CC500EDA80C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		92D5C11D156B6CC500EDA80C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		92D5C11F156B6CC500EDA80C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		92D5C123156B6CC500EDA80C /* Count-Info.plist */ = {isa = PBXFileReference; path = "Count-Info.plist"; sourceTree = "<group>"; };
+		92D5C123156B6CC500EDA80C /* Count-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Count-Info.plist"; sourceTree = "<group>"; };
 		92D5C125156B6CC500EDA80C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		92D5C127156B6CC500EDA80C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		92D5C129156B6CC500EDA80C /* Count-Prefix.pch */ = {isa = PBXFileReference; path = "Count-Prefix.pch"; sourceTree = "<group>"; };
-		92D5C12A156B6CC500EDA80C /* MTAppDelegate.h */ = {isa = PBXFileReference; path = MTAppDelegate.h; sourceTree = "<group>"; };
+		92D5C129156B6CC500EDA80C /* Count-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Count-Prefix.pch"; sourceTree = "<group>"; };
+		92D5C12A156B6CC500EDA80C /* MTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAppDelegate.h; sourceTree = "<group>"; };
 		92D5C12B156B6CC500EDA80C /* MTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAppDelegate.m; sourceTree = "<group>"; };
 		92D5C12E156B6CC500EDA80C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		92D5C131156B6CC500EDA80C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		92D5C133156B6CC500EDA80C /* MTViewController.h */ = {isa = PBXFileReference; path = MTViewController.h; sourceTree = "<group>"; };
-		92D5C134156B6CC500EDA80C /* MTViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTViewController.m; sourceTree = "<group>"; };
+		92D5C133156B6CC500EDA80C /* MTAnotherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTAnotherViewController.h; sourceTree = "<group>"; };
+		92D5C134156B6CC500EDA80C /* MTAnotherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTAnotherViewController.m; sourceTree = "<group>"; };
 		92D5C13B156B6CC500EDA80C /* CountTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D5C13C156B6CC500EDA80C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		92D5C144156B6CC500EDA80C /* CountTests-Info.plist */ = {isa = PBXFileReference; path = "CountTests-Info.plist"; sourceTree = "<group>"; };
+		92D5C144156B6CC500EDA80C /* CountTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CountTests-Info.plist"; sourceTree = "<group>"; };
 		92D5C146156B6CC500EDA80C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		92D5C148156B6CC500EDA80C /* CountTests.h */ = {isa = PBXFileReference; path = CountTests.h; sourceTree = "<group>"; };
+		92D5C148156B6CC500EDA80C /* CountTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountTests.h; sourceTree = "<group>"; };
 		92D5C149156B6CC500EDA80C /* CountTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountTests.m; sourceTree = "<group>"; };
+		92D5C153156B6FCE00EDA80C /* MTCounterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCounterViewController.h; sourceTree = "<group>"; };
+		92D5C154156B6FCE00EDA80C /* MTCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCounterViewController.m; sourceTree = "<group>"; };
+		92D5C156156B7CB100EDA80C /* MTVisualizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTVisualizerViewController.h; sourceTree = "<group>"; };
+		92D5C157156B7CB100EDA80C /* MTVisualizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTVisualizerViewController.m; sourceTree = "<group>"; };
+		92D5C15D156B808100EDA80C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		92D5C15F156B808700EDA80C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,8 @@
 		92D5C10C156B6CC400EDA80C = {
 			isa = PBXGroup;
 			children = (
+				92D5C15F156B808700EDA80C /* Icon@2x.png */,
+				92D5C15D156B808100EDA80C /* Icon.png */,
 				92D5C121156B6CC500EDA80C /* Count */,
 				92D5C142156B6CC500EDA80C /* CountTests */,
 				92D5C11A156B6CC500EDA80C /* Frameworks */,
@@ -117,9 +129,13 @@
 				92D5C12B156B6CC500EDA80C /* MTAppDelegate.m */,
 				92D5C12D156B6CC500EDA80C /* MainStoryboard_iPhone.storyboard */,
 				92D5C130156B6CC500EDA80C /* MainStoryboard_iPad.storyboard */,
-				92D5C133156B6CC500EDA80C /* MTViewController.h */,
-				92D5C134156B6CC500EDA80C /* MTViewController.m */,
+				92D5C133156B6CC500EDA80C /* MTAnotherViewController.h */,
+				92D5C134156B6CC500EDA80C /* MTAnotherViewController.m */,
 				92D5C122156B6CC500EDA80C /* Supporting Files */,
+				92D5C153156B6FCE00EDA80C /* MTCounterViewController.h */,
+				92D5C154156B6FCE00EDA80C /* MTCounterViewController.m */,
+				92D5C156156B7CB100EDA80C /* MTVisualizerViewController.h */,
+				92D5C157156B7CB100EDA80C /* MTVisualizerViewController.m */,
 			);
 			path = Count;
 			sourceTree = "<group>";
@@ -229,6 +245,8 @@
 				92D5C126156B6CC500EDA80C /* InfoPlist.strings in Resources */,
 				92D5C12F156B6CC500EDA80C /* MainStoryboard_iPhone.storyboard in Resources */,
 				92D5C132156B6CC500EDA80C /* MainStoryboard_iPad.storyboard in Resources */,
+				92D5C15E156B808100EDA80C /* Icon.png in Resources */,
+				92D5C160156B808700EDA80C /* Icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +283,9 @@
 			files = (
 				92D5C128156B6CC500EDA80C /* main.m in Sources */,
 				92D5C12C156B6CC500EDA80C /* MTAppDelegate.m in Sources */,
-				92D5C135156B6CC500EDA80C /* MTViewController.m in Sources */,
+				92D5C135156B6CC500EDA80C /* MTAnotherViewController.m in Sources */,
+				92D5C155156B6FCE00EDA80C /* MTCounterViewController.m in Sources */,
+				92D5C158156B7CB100EDA80C /* MTVisualizerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

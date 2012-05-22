@@ -2,7 +2,7 @@
 //  MTAppDelegate.m
 //  Count
 //
-//  Created by 征大 高山 on 5/21/12.
+//  Created by Motohiro Takayama on 5/21/12.
 //  Copyright (c) 2012 mootoh.net. All rights reserved.
 //
 
@@ -14,10 +14,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

@@ -2,17 +2,17 @@
 //  MTViewController.m
 //  Count
 //
-//  Created by 征大 高山 on 5/21/12.
+//  Created by Motohiro Takayama on 5/21/12.
 //  Copyright (c) 2012 mootoh.net. All rights reserved.
 //
 
-#import "MTViewController.h"
+#import "MTAnotherViewController.h"
 
-@interface MTViewController ()
+@interface MTAnotherViewController ()
 
 @end
 
-@implementation MTViewController
+@implementation MTAnotherViewController
 
 - (void)viewDidLoad
 {
@@ -33,6 +33,11 @@
     } else {
         return YES;
     }
+}
+
+- (IBAction)handleSwipe:(UISwipeGestureRecognizer *)gesture;
+{
+    NSLog(@"aaaaaaaaaaa");
 }
 
 @end
