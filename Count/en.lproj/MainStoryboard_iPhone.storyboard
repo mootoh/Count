@@ -6,11 +6,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1181"/>
     </dependencies>
     <scenes>
-        <!--Another View Controller-->
+        <!--Counter View Controller-->
         <scene sceneID="5">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
-                <viewController id="2" customClass="MTAnotherViewController" sceneMemberID="viewController">
+                <viewController id="2" customClass="MTCounterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -22,6 +22,28 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="zsm-SM-Gsj">
+                                <rect key="frame" x="47" y="205" width="127" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad" returnKeyType="done"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0r4-dt-7pu">
+                                <rect key="frame" x="202" y="202" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="recordCount:" destination="2" eventType="touchUpInside" id="Z9M-nG-lXa"/>
+                                    <segue destination="Pqe-e9-qxl" kind="modal" id="32p-mU-xAL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -33,6 +55,10 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="countTextField" destination="zsm-SM-Gsj" id="Hm5-M4-a6d"/>
+                        <outlet property="titleLabel" destination="mQG-sK-1eY" id="vZa-xf-DXo"/>
+                    </connections>
                 </viewController>
                 <swipeGestureRecognizer direction="up" id="W5N-lb-3rm">
                     <connections>
@@ -47,13 +73,13 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="374" y="-93"/>
+            <point key="canvasLocation" x="494" y="-683"/>
         </scene>
-        <!--View Controller-->
+        <!--Another View Controller-->
         <scene sceneID="FZH-Em-oh2">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Al-ok-oma" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="YrT-IN-XCC" sceneMemberID="viewController">
+                <viewController id="YrT-IN-XCC" customClass="MTAnotherViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X9m-cF-cFt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -83,7 +109,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="374" y="-707"/>
+            <point key="canvasLocation" x="-50" y="-683"/>
         </scene>
         <!--Visualizer View Controller-->
         <scene sceneID="K3F-Ys-Dsx">
@@ -118,7 +144,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="374" y="632"/>
+            <point key="canvasLocation" x="1032" y="-683"/>
         </scene>
     </scenes>
     <classes>
@@ -126,6 +152,14 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MTAnotherViewController.h"/>
             <relationships>
                 <relationship kind="action" name="handleSwipe:" candidateClass="UISwipeGestureRecognizer"/>
+            </relationships>
+        </class>
+        <class className="MTCounterViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MTCounterViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="recordCount:"/>
+                <relationship kind="outlet" name="countTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
         <class className="MTVisualizerViewController" superclassName="UIViewController">
@@ -137,4 +171,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="32p-mU-xAL"/>
+    </inferredMetricsTieBreakers>
 </document>

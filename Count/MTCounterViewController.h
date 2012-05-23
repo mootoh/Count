@@ -10,4 +10,9 @@
 
 @interface MTCounterViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UITextField *countTextField;
+
+- (IBAction)recordCount:(id)sender;
+
 @end

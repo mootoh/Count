@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    [self drawChart];
 }
 
 - (void)viewDidUnload
@@ -38,6 +40,11 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
+}
+
+- (void) drawChart
+{
+
 }
 
 @end

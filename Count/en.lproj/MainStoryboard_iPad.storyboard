@@ -15,11 +15,20 @@
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="D0j-0U-P3v" appends="YES" id="9QD-ba-Mwh"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="UjT-hn-VNl"/>
                 </viewController>
+                <swipeGestureRecognizer direction="down" id="D0j-0U-P3v">
+                    <connections>
+                        <segue destination="2" kind="modal" id="9Og-yg-qZP"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-377" y="315"/>
+            <point key="canvasLocation" x="-74" y="585"/>
         </scene>
         <!--Another View Controller-->
         <scene sceneID="4">
@@ -29,25 +38,30 @@
                     <view key="view" contentMode="scaleToFill" id="5">
                         <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.40000000596046448" green="0.80000001192092896" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="AKc-13-Pd3" appends="YES" id="nKe-ki-mNN"/>
+                            <outletCollection property="gestureRecognizers" destination="aUC-Wx-kLR" appends="YES" id="wVC-Sn-wU0"/>
                         </connections>
                     </view>
                 </viewController>
-                <swipeGestureRecognizer direction="down" id="AKc-13-Pd3">
+                <swipeGestureRecognizer direction="up" id="aUC-Wx-kLR">
                     <connections>
-                        <outlet property="delegate" destination="2" id="Mtt-jM-1Uo"/>
-                        <segue destination="Nfl-6l-HIB" kind="push" id="XLg-SQ-ghW"/>
+                        <action selector="handleSwipe:" destination="2" id="6ed-7V-XX4"/>
+                        <outlet property="delegate" destination="2" id="Vpf-gX-UCt"/>
+                        <segue destination="Nfl-6l-HIB" kind="modal" id="dTv-eN-Qaz"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
+            <point key="canvasLocation" x="-113" y="-556"/>
         </scene>
     </scenes>
     <classes>
         <class className="MTAnotherViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MTAnotherViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="handleSwipe:" candidateClass="UISwipeGestureRecognizer"/>
+            </relationships>
         </class>
         <class className="MTCounterViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MTCounterViewController.h"/>

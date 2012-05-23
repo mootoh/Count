@@ -13,6 +13,8 @@
 @end
 
 @implementation MTCounterViewController
+@synthesize titleLabel;
+@synthesize countTextField;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -31,6 +33,8 @@
 
 - (void)viewDidUnload
 {
+    [self setTitleLabel:nil];
+    [self setCountTextField:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -38,6 +42,13 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
 	return YES;
+}
+
+
+- (IBAction)recordCount:(id)sender
+{
+    NSString *input = countTextField.text;
+    // store the data into iCloud storage.
 }
 
 @end
