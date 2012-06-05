@@ -7,6 +7,10 @@
 //
 
 #import "MTCounterViewController.h"
+#import <CoreData/CoreData.h>
+#import "Countee.h"
+#import "Count.h"
+#import "MTAppDelegate.h"
 
 @interface MTCounterViewController ()
 
@@ -44,10 +48,41 @@
 	return YES;
 }
 
+- (void) collectAllCounts
+{
+    MTAppDelegate *appDelegate = (MTAppDelegate *)[UIApplication sharedApplication].delegate;
+
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Count" inManagedObjectContext:appDelegate.managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *fetchedObjects = [appDelegate.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    if (fetchedObjects == nil) {
+        NSLog(@"error in fetching: %@", [error localizedDescription]);
+    }
+
+    for (Count *count in fetchedObjects) {
+        NSLog(@"count = %d, %@", [count.count intValue], count.counted_at);
+    }
+}
 
 - (IBAction)recordCount:(id)sender
 {
+    MTAppDelegate *appDelegate = (MTAppDelegate *)[UIApplication sharedApplication].delegate;
+    Count *count = [NSEntityDescription insertNewObjectForEntityForName:@"Count" inManagedObjectContext:appDelegate.managedObjectContext];
     NSString *input = countTextField.text;
+    count.count = [NSNumber numberWithInt:[input intValue]];
+    count.counted_at = [NSDate new];
+
+    NSError *error = nil;
+    [appDelegate.managedObjectContext save:&error];
+    if (error) {
+        NSLog(@"error in saving: %@", [error localizedDescription]);
+        return;
+    }
+
+    [self collectAllCounts];
     // store the data into iCloud storage.
 }
 

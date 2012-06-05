@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		92050CCE15761471004E8673 /* MTCountModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92050CCC15761471004E8673 /* MTCountModel.xcdatamodeld */; };
+		92A600BB157E62EC00A1340D /* Count.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A600B8157E62EC00A1340D /* Count.m */; };
+		92A600BC157E62EC00A1340D /* Countee.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A600BA157E62EC00A1340D /* Countee.m */; };
+		92A600BE157E630500A1340D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A600BD157E630500A1340D /* CoreData.framework */; };
 		92D5C11C156B6CC500EDA80C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D5C11B156B6CC500EDA80C /* UIKit.framework */; };
 		92D5C11E156B6CC500EDA80C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D5C11D156B6CC500EDA80C /* Foundation.framework */; };
 		92D5C120156B6CC500EDA80C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D5C11F156B6CC500EDA80C /* CoreGraphics.framework */; };
@@ -38,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		92050CCD15761471004E8673 /* MTCountModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MTCountModel.xcdatamodel; sourceTree = "<group>"; };
+		92A600B7157E62EC00A1340D /* Count.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Count.h; sourceTree = "<group>"; };
+		92A600B8157E62EC00A1340D /* Count.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Count.m; sourceTree = "<group>"; };
+		92A600B9157E62EC00A1340D /* Countee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Countee.h; sourceTree = "<group>"; };
+		92A600BA157E62EC00A1340D /* Countee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Countee.m; sourceTree = "<group>"; };
+		92A600BD157E630500A1340D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		92D5C117156B6CC500EDA80C /* Count.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Count.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D5C11B156B6CC500EDA80C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		92D5C11D156B6CC500EDA80C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,8 +72,8 @@
 		92D5C154156B6FCE00EDA80C /* MTCounterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCounterViewController.m; sourceTree = "<group>"; };
 		92D5C156156B7CB100EDA80C /* MTVisualizerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTVisualizerViewController.h; sourceTree = "<group>"; };
 		92D5C157156B7CB100EDA80C /* MTVisualizerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTVisualizerViewController.m; sourceTree = "<group>"; };
-		92D5C15D156B808100EDA80C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		92D5C15F156B808700EDA80C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		92D5C15D156B808100EDA80C /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = ../Icon.png; sourceTree = "<group>"; };
+		92D5C15F156B808700EDA80C /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "../Icon@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A600BE157E630500A1340D /* CoreData.framework in Frameworks */,
 				92D5C11C156B6CC500EDA80C /* UIKit.framework in Frameworks */,
 				92D5C11E156B6CC500EDA80C /* Foundation.framework in Frameworks */,
 				92D5C120156B6CC500EDA80C /* CoreGraphics.framework in Frameworks */,
@@ -93,8 +104,6 @@
 		92D5C10C156B6CC400EDA80C = {
 			isa = PBXGroup;
 			children = (
-				92D5C15F156B808700EDA80C /* Icon@2x.png */,
-				92D5C15D156B808100EDA80C /* Icon.png */,
 				92D5C121156B6CC500EDA80C /* Count */,
 				92D5C142156B6CC500EDA80C /* CountTests */,
 				92D5C11A156B6CC500EDA80C /* Frameworks */,
@@ -118,6 +127,7 @@
 				92D5C11D156B6CC500EDA80C /* Foundation.framework */,
 				92D5C11F156B6CC500EDA80C /* CoreGraphics.framework */,
 				92D5C13C156B6CC500EDA80C /* SenTestingKit.framework */,
+				92A600BD157E630500A1340D /* CoreData.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,17 +135,22 @@
 		92D5C121156B6CC500EDA80C /* Count */ = {
 			isa = PBXGroup;
 			children = (
+				92A600B7157E62EC00A1340D /* Count.h */,
+				92A600B8157E62EC00A1340D /* Count.m */,
+				92A600B9157E62EC00A1340D /* Countee.h */,
+				92A600BA157E62EC00A1340D /* Countee.m */,
 				92D5C12A156B6CC500EDA80C /* MTAppDelegate.h */,
 				92D5C12B156B6CC500EDA80C /* MTAppDelegate.m */,
 				92D5C12D156B6CC500EDA80C /* MainStoryboard_iPhone.storyboard */,
 				92D5C130156B6CC500EDA80C /* MainStoryboard_iPad.storyboard */,
 				92D5C133156B6CC500EDA80C /* MTAnotherViewController.h */,
 				92D5C134156B6CC500EDA80C /* MTAnotherViewController.m */,
-				92D5C122156B6CC500EDA80C /* Supporting Files */,
 				92D5C153156B6FCE00EDA80C /* MTCounterViewController.h */,
 				92D5C154156B6FCE00EDA80C /* MTCounterViewController.m */,
 				92D5C156156B7CB100EDA80C /* MTVisualizerViewController.h */,
 				92D5C157156B7CB100EDA80C /* MTVisualizerViewController.m */,
+				92050CCC15761471004E8673 /* MTCountModel.xcdatamodeld */,
+				92D5C122156B6CC500EDA80C /* Supporting Files */,
 			);
 			path = Count;
 			sourceTree = "<group>";
@@ -143,6 +158,8 @@
 		92D5C122156B6CC500EDA80C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				92D5C15F156B808700EDA80C /* Icon@2x.png */,
+				92D5C15D156B808100EDA80C /* Icon.png */,
 				92D5C123156B6CC500EDA80C /* Count-Info.plist */,
 				92D5C124156B6CC500EDA80C /* InfoPlist.strings */,
 				92D5C127156B6CC500EDA80C /* main.m */,
@@ -286,6 +303,9 @@
 				92D5C135156B6CC500EDA80C /* MTAnotherViewController.m in Sources */,
 				92D5C155156B6FCE00EDA80C /* MTCounterViewController.m in Sources */,
 				92D5C158156B7CB100EDA80C /* MTVisualizerViewController.m in Sources */,
+				92050CCE15761471004E8673 /* MTCountModel.xcdatamodeld in Sources */,
+				92A600BB157E62EC00A1340D /* Count.m in Sources */,
+				92A600BC157E62EC00A1340D /* Countee.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +485,7 @@
 				92D5C14F156B6CC500EDA80C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		92D5C150156B6CC500EDA80C /* Build configuration list for PBXNativeTarget "CountTests" */ = {
 			isa = XCConfigurationList;
@@ -473,8 +494,22 @@
 				92D5C152156B6CC500EDA80C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		92050CCC15761471004E8673 /* MTCountModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				92050CCD15761471004E8673 /* MTCountModel.xcdatamodel */,
+			);
+			currentVersion = 92050CCD15761471004E8673 /* MTCountModel.xcdatamodel */;
+			path = MTCountModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 92D5C10E156B6CC400EDA80C /* Project object */;
 }

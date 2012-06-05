@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Count" representedClassName="Count" syncable="YES">
+        <attribute name="count" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="counted_at" attributeType="Date" syncable="YES"/>
+        <relationship name="countee" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Countee" inverseName="counts" inverseEntity="Countee" syncable="YES"/>
+    </entity>
+    <entity name="Countee" representedClassName="Countee" syncable="YES">
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="unit" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="counts" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Count" inverseName="countee" inverseEntity="Count" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Count" positionX="160" positionY="192" width="128" height="90"/>
+        <element name="Countee" positionX="-189" positionY="198" width="128" height="90"/>
+    </elements>
+</model>
