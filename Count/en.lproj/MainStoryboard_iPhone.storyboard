@@ -127,6 +127,11 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" id="66B-aM-U8o" customClass="PCLineChartView">
+                                <rect key="frame" x="20" y="86" width="280" height="374"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
@@ -136,6 +141,9 @@
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="66B-aM-U8o" id="cUW-i2-lX4"/>
+                    </connections>
                 </viewController>
                 <swipeGestureRecognizer direction="up" id="aRF-DA-j9M">
                     <connections>
@@ -164,6 +172,12 @@
         </class>
         <class className="MTVisualizerViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MTVisualizerViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="lineChartView" candidateClass="PCLineChartView"/>
+            </relationships>
+        </class>
+        <class className="PCLineChartView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/PCLineChartView.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -171,7 +185,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="32p-mU-xAL"/>
-    </inferredMetricsTieBreakers>
 </document>

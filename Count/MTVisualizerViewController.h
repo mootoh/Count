@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@class PCLineChartView;
 
 @interface MTVisualizerViewController : UIViewController
-
+@property (weak, nonatomic) IBOutlet PCLineChartView *lineChartView;
 @end
