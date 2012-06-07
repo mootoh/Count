@@ -35,14 +35,6 @@
 
 @implementation PCLineChartViewComponent
 @synthesize title, points, colour, shouldLabelValues, labelFormat;
--(void) dealloc
-{
-    [labelFormat release];
-    [points release];
-    [colour release];
-    [title release];
-    [super dealloc];
-}
 
 - (id)init
 {
@@ -64,23 +56,36 @@
 @synthesize autoscaleYAxis, numYIntervals;
 @synthesize numXIntervals;
 
+- (void) initializer
+{
+    // Initialization code
+    
+    [self setBackgroundColor:[UIColor clearColor]];
+    interval = 20;
+    maxValue = 100;
+    minValue = 0;
+    numYIntervals = 5;
+    numXIntervals = 1;
+    yLabelFont = [UIFont fontWithName:@"GeezaPro-Bold" size:14]; 
+    xLabelFont = [UIFont fontWithName:@"HiraKakuProN-W6" size:12];
+    valueLabelFont = [UIFont fontWithName:@"HiraKakuProN-W6" size:10];
+    legendFont = [UIFont fontWithName:@"HiraKakuProN-W6" size:10];
+}
+
 - (id)initWithFrame:(CGRect)frame
 {
     self = [super initWithFrame:frame];
     if (self) {
-        // Initialization code
-        
-        [self setBackgroundColor:[UIColor clearColor]];
-        interval = 20;
-		maxValue = 100;
-		minValue = 0;
-        numYIntervals = 5;
-        numXIntervals = 1;
-		yLabelFont = [[UIFont fontWithName:@"GeezaPro-Bold" size:14] retain]; 
-		xLabelFont = [[UIFont fontWithName:@"HiraKakuProN-W6" size:12] retain];
-		valueLabelFont = [[UIFont fontWithName:@"HiraKakuProN-W6" size:10] retain];
-		legendFont = [[UIFont fontWithName:@"HiraKakuProN-W6" size:10] retain];
-		
+        [self initializer];
+    }
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super initWithCoder:aDecoder];
+    if (self) {
+        [self initializer];
     }
     return self;
 }
@@ -304,14 +309,6 @@
         
         y_level = y + 15;
     }
-}
-
-- (void)dealloc
-{
-    [components release];
-    [xLabels release];
-	self.yLabelFont = self.xLabelFont = self.valueLabelFont = self.legendFont = nil;
-    [super dealloc];
 }
 
 @end
