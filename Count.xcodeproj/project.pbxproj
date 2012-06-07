@@ -11,6 +11,7 @@
 		92A600BB157E62EC00A1340D /* Count.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A600B8157E62EC00A1340D /* Count.m */; };
 		92A600BC157E62EC00A1340D /* Countee.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A600BA157E62EC00A1340D /* Countee.m */; };
 		92A600BE157E630500A1340D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92A600BD157E630500A1340D /* CoreData.framework */; };
+		92A600D2157FC98A00A1340D /* PCLineChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A600D1157FC98A00A1340D /* PCLineChartView.m */; };
 		92D5C11C156B6CC500EDA80C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D5C11B156B6CC500EDA80C /* UIKit.framework */; };
 		92D5C11E156B6CC500EDA80C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D5C11D156B6CC500EDA80C /* Foundation.framework */; };
 		92D5C120156B6CC500EDA80C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92D5C11F156B6CC500EDA80C /* CoreGraphics.framework */; };
@@ -48,6 +49,8 @@
 		92A600B9157E62EC00A1340D /* Countee.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Countee.h; sourceTree = "<group>"; };
 		92A600BA157E62EC00A1340D /* Countee.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Countee.m; sourceTree = "<group>"; };
 		92A600BD157E630500A1340D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		92A600D0157FC98A00A1340D /* PCLineChartView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCLineChartView.h; sourceTree = "<group>"; };
+		92A600D1157FC98A00A1340D /* PCLineChartView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCLineChartView.m; sourceTree = "<group>"; };
 		92D5C117156B6CC500EDA80C /* Count.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Count.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92D5C11B156B6CC500EDA80C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		92D5C11D156B6CC500EDA80C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -101,9 +104,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92A600CF157FC97900A1340D /* iOSPlot */ = {
+			isa = PBXGroup;
+			children = (
+				92A600D0157FC98A00A1340D /* PCLineChartView.h */,
+				92A600D1157FC98A00A1340D /* PCLineChartView.m */,
+			);
+			name = iOSPlot;
+			sourceTree = "<group>";
+		};
 		92D5C10C156B6CC400EDA80C = {
 			isa = PBXGroup;
 			children = (
+				92A600CF157FC97900A1340D /* iOSPlot */,
 				92D5C121156B6CC500EDA80C /* Count */,
 				92D5C142156B6CC500EDA80C /* CountTests */,
 				92D5C11A156B6CC500EDA80C /* Frameworks */,
@@ -306,6 +319,7 @@
 				92050CCE15761471004E8673 /* MTCountModel.xcdatamodeld in Sources */,
 				92A600BB157E62EC00A1340D /* Count.m in Sources */,
 				92A600BC157E62EC00A1340D /* Countee.m in Sources */,
+				92A600D2157FC98A00A1340D /* PCLineChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
