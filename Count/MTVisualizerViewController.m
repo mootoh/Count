@@ -62,6 +62,10 @@
     if (fetchedObjects == nil) {
         NSLog(@"error in fetching: %@", [error localizedDescription]);
     }
+
+//    for (Count *count in fetchedObjects) {
+//        NSLog(@"count = %d, %@", [count.count intValue], count.counted_at);
+//    }
     return fetchedObjects;
 }
 
@@ -110,4 +114,8 @@
 
 }
 
+- (IBAction)onSwipeToUp
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
 @end

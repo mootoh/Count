@@ -20,15 +20,6 @@
 @synthesize titleLabel;
 @synthesize countTextField;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -81,9 +72,11 @@
         NSLog(@"error in saving: %@", [error localizedDescription]);
         return;
     }
-
-    [self collectAllCounts];
-    // store the data into iCloud storage.
 }
 
+- (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"countEnteredToVisualizer"])
+        [self recordCount:sender];
+}
 @end

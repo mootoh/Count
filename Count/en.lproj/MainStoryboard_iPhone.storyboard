@@ -40,8 +40,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="recordCount:" destination="2" eventType="touchUpInside" id="Z9M-nG-lXa"/>
-                                    <segue destination="Pqe-e9-qxl" kind="modal" id="32p-mU-xAL"/>
+                                    <segue destination="Pqe-e9-qxl" kind="modal" identifier="countEnteredToVisualizer" id="fQS-lB-GEw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -60,20 +59,20 @@
                         <outlet property="titleLabel" destination="mQG-sK-1eY" id="vZa-xf-DXo"/>
                     </connections>
                 </viewController>
-                <swipeGestureRecognizer direction="up" id="W5N-lb-3rm">
+                <swipeGestureRecognizer direction="down" id="W5N-lb-3rm">
                     <connections>
                         <action selector="handleSwipe:" destination="2" id="kDM-Z6-qNN"/>
                         <segue destination="YrT-IN-XCC" kind="modal" id="JLP-uQ-O3G"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="down" id="ucX-cr-bZX">
+                <swipeGestureRecognizer direction="up" id="ucX-cr-bZX">
                     <connections>
                         <action selector="handleSwipe:" destination="2" id="ldz-4s-AEq"/>
                         <segue destination="Pqe-e9-qxl" kind="modal" id="E0g-YX-4CC"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="494" y="-683"/>
+            <point key="canvasLocation" x="596" y="-801"/>
         </scene>
         <!--Another View Controller-->
         <scene sceneID="FZH-Em-oh2">
@@ -109,7 +108,7 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-50" y="-683"/>
+            <point key="canvasLocation" x="131" y="-73"/>
         </scene>
         <!--Visualizer View Controller-->
         <scene sceneID="K3F-Ys-Dsx">
@@ -120,7 +119,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Visualizer" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fQN-8n-VgA">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Viz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="fQN-8n-VgA">
                                 <rect key="frame" x="20" y="20" width="225" height="58"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="48"/>
@@ -145,14 +144,14 @@
                         <outlet property="lineChartView" destination="66B-aM-U8o" id="cUW-i2-lX4"/>
                     </connections>
                 </viewController>
-                <swipeGestureRecognizer direction="up" id="aRF-DA-j9M">
+                <swipeGestureRecognizer direction="down" id="aRF-DA-j9M">
                     <connections>
+                        <action selector="onSwipeToUp" destination="Pqe-e9-qxl" id="Ai6-Hs-JbO"/>
                         <outlet property="delegate" destination="3sv-fm-ql8" id="etT-Np-n5R"/>
-                        <segue destination="2" kind="modal" id="UsI-Nd-pAV"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1032" y="-683"/>
+            <point key="canvasLocation" x="1001" y="-169"/>
         </scene>
     </scenes>
     <classes>
@@ -185,4 +184,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="fQS-lB-GEw"/>
+    </inferredMetricsTieBreakers>
 </document>
